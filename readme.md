@@ -18,4 +18,12 @@ In order to add new packages to our venv we issue the following command:
 ```
 pip install -r requirements.txt
 ```
+## Deploying our function
+First we have to set our project ID with the following command:
+```
+gclooud config set project [YOUR PRO?JECT ID]
+```
+Then we deploy our function wiht this command:
+```
+gcloud function deploy [FUNCTION NAME] --runtime python38 --trigger-http
 
