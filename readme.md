@@ -25,5 +25,13 @@ gclooud config set project [YOUR PRO?JECT ID]
 ```
 Then we deploy our function wiht this command:
 ```
-gcloud function deploy [FUNCTION NAME] --runtime python38 --trigger-http
+gcloud functions deploy [FUNCTION NAME] --runtime python38 --trigger-http
+```
+## Deploying Cloud Functions with environment variables and other dependencies
+
+We have to create a .env.yaml file and a requirements.txt file in the same directory as main.py and then run the following command:
+```
+gcloud functions deploy send_mail --env-vars-file .env.yaml --runtime python38 --trigger-http
+```
+
 
